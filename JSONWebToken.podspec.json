@@ -11,10 +11,10 @@
     "Kyle Fuller": "kyle@fuller.li"
   },
   "source": {
-    "git": "https://github.com/kylef/JSONWebToken.swift.git",
+    "git": "https://github.com/egv/JSONWebToken.swift.git",
     "tag": "2.2.0"
   },
-  "source_files": "Sources/*.swift",
+  "source_files": "Sources/**/*.swift",
   "platforms": {
     "ios": "8.0",
     "osx": "10.9",
@@ -24,12 +24,16 @@
   "requires_arc": true,
   "module_name": "JWT",
   "exclude_files": [
-    "Sources/HMACCryptoSwift.swift"
+    "Sources/**/HMACCommonCrypto.swift"
   ],
   "pod_target_xcconfig": {
     "SWIFT_INCLUDE_PATHS": "$(PODS_ROOT)/JSONWebToken/"
   },
-  "preserve_paths": "CommonCrypto/{shim.h,module.modulemap}",
+  "dependencies": {
+    "CryptoSwift": [
+      "~> 0.11.0"
+    ]
+  },
   "pushed_with_swift_version": "3.0"
 }
 

@@ -2,7 +2,7 @@ import Foundation
 
 
 /// No Algorithm, i-e, insecure
-public final class NoneAlgorithm: Algorithm, SignAlgorithm, VerifyAlgorithm {
+public final class NoneAlgorithm: AlgorithmP, SignAlgorithm, VerifyAlgorithm {
    public var name: String {
     return "none"
   }
